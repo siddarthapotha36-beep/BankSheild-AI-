@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "category": "genuine",
+    "expected_verdict": "Likely Safe",
+    "label": "SBI UPI Debit Alert",
+    "message": "Dear Customer, INR 1,250.00 debited from A/C XX4321 on 09-OCT-26 via UPI txn to Swiggy. Ref 429384918234. If not done by you, call 1800112211 - State Bank of India"
+  },
+  {
+    "id": 2,
+    "category": "genuine",
+    "expected_verdict": "Likely Safe",
+    "label": "HDFC Salary Credit",
+    "message": "Salary of INR 75,000.00 credited to your HDFC Bank A/C ending 9876 on 01-OCT-26 by XYZ TECH PVT LTD. Avail balance INR 82,340.50. Check details on NetBanking."
+  },
+  {
+    "id": 3,
+    "category": "genuine",
+    "expected_verdict": "Likely Safe",
+    "label": "ICICI ATM Cash Withdrawal",
+    "message": "Dear Customer, INR 4,000.00 withdrawn from ICICI Bank ATM at MG Road on Card XX5678. Avail Bal: INR 15,200.00. Never share your ATM PIN with anyone."
+  },
+  {
+    "id": 4,
+    "category": "genuine",
+    "expected_verdict": "Likely Safe",
+    "label": "Axis Bank Online Transaction OTP",
+    "message": "849201 is your OTP for online transaction of INR 2,499.00 on Flipkart. Do NOT share OTP with anyone including Axis Bank staff. OTP is valid for 5 mins."
+  },
+  {
+    "id": 5,
+    "category": "genuine",
+    "expected_verdict": "Likely Safe",
+    "label": "Kotak Credit Card Spend Alert",
+    "message": "ALERT: INR 3,890.00 spent on Kotak Credit Card XX1122 at RELIANCE RETAIL on 08-OCT-26 19:40. Available limit: INR 96,110.00."
+  },
+  {
+    "id": 6,
+    "category": "genuine",
+    "expected_verdict": "Likely Safe",
+    "label": "PNB Electricity Bill Debit",
+    "message": "Dear Customer, INR 1,450.00 debited from A/C XX8899 towards Electricity Bill payment. Txn ID: PNB983742918. Thank you for banking with PNB."
+  },
+  {
+    "id": 7,
+    "category": "genuine",
+    "expected_verdict": "Likely Safe",
+    "label": "Bank of Baroda NetBanking Login",
+    "message": "Dear Customer, successful login to Baroda Connect NetBanking on 09-OCT-26 at 14:22 IST. If this was not you, SMS BLOCK to 8422009988 immediately."
+  },
+  {
+    "id": 8,
+    "category": "genuine",
+    "expected_verdict": "Likely Safe",
+    "label": "Official SBI YONO Website Notice",
+    "message": "Dear Customer, maintain your average balance to avoid non-maintenance charges. Download official YONO SBI app from Google Play or visit https://www.onlinesbi.sbi - SBI"
+  },
+  {
+    "id": 9,
+    "category": "genuine",
+    "expected_verdict": "Likely Safe",
+    "label": "Canara Bank NEFT Credit",
+    "message": "NEFT cr of INR 12,000.00 from RAMESH SHARMA to your Canara Bank A/C XX3456 on 07-OCT-26. UTR: CNRB20261007987."
+  },
+  {
+    "id": 10,
+    "category": "genuine",
+    "expected_verdict": "Likely Safe",
+    "label": "IDFC FIRST Monthly Interest",
+    "message": "Dear Customer, monthly interest of INR 342.00 has been credited to your IDFC FIRST Savings A/C ending 7788 for the month of Sep 2026."
+  },
+  {
+    "id": 11,
+    "category": "scam",
+    "expected_verdict": "Dangerous",
+    "label": "SBI YONO Account Blocked Phishing",
+    "message": "Dear Customer, your SBI account blocked today! Click http://sbi-yono-kyc.xyz to update your PAN and unblock your account within 24 hours."
+  },
+  {
+    "id": 12,
+    "category": "scam",
+    "expected_verdict": "Suspicious",
+    "label": "Electricity Bill Disconnection Threat",
+    "message": "Dear consumer electricity power will be disconnected tonight 9:30 PM due to unpaid bill. Immediately contact power officer at 9876543210 to avoid disconnection."
+  },
+  {
+    "id": 13,
+    "category": "scam",
+    "expected_verdict": "Dangerous",
+    "label": "HDFC Card Blocked OTP Request",
+    "message": "Dear customer your HDFC debit card has been suspended. Call back and share your OTP with executive to verify card details and reactivate."
+  },
+  {
+    "id": 14,
+    "category": "scam",
+    "expected_verdict": "Dangerous",
+    "label": "ICICI Mandatory KYC APK Download",
+    "message": "Dear ICICI user, complete mandatory KYC verification to prevent account deactivation. Download and install support app from http://icici-verify.top/support.apk now."
+  },
+  {
+    "id": 15,
+    "category": "scam",
+    "expected_verdict": "Suspicious",
+    "label": "Axis Credit Card Reward Points Bait",
+    "message": "Congratulations! You have unclaimed Axis Bank credit card reward points worth Rs 9,850 expiring tonight. Claim cashback immediately at http://bit.ly/axis-reward-points"
+  },
+  {
+    "id": 16,
+    "category": "scam",
+    "expected_verdict": "Dangerous",
+    "label": "Kotak Lookalike Aadhaar KYC Link",
+    "message": "Urgent: Your Kotak Netbanking account will be closed within 12 hours due to pending KYC. Visit http://kotak-netbanking-update.click to verify your Aadhaar."
+  },
+  {
+    "id": 17,
+    "category": "scam",
+    "expected_verdict": "Dangerous",
+    "label": "AnyDesk Remote Screen Sharing Scam",
+    "message": "Dear customer, your refund of Rs 15,000 is on hold. Install AnyDesk app immediately and provide 9 digit code to bank manager to process refund."
+  },
+  {
+    "id": 18,
+    "category": "scam",
+    "expected_verdict": "Dangerous",
+    "label": "Insecure IP Host OTP Stealing Link",
+    "message": "Important notice from Bank: Suspicious activity on your card. Enter OTP to cancel transaction at http://192.168.1.105/bank/verify"
+  },
+  {
+    "id": 19,
+    "category": "scam",
+    "expected_verdict": "Suspicious",
+    "label": "Account On Hold Phone Bait",
+    "message": "Dear customer your bank account is put on hold. Call customer care urgently at 9823456789 to prevent permanent blocking."
+  },
+  {
+    "id": 20,
+    "category": "scam",
+    "expected_verdict": "Dangerous",
+    "label": "RBI Lottery Prize CVV Phishing",
+    "message": "Congrats! You have won Rs 25,00,000 in RBI Lucky Draw. Submit your bank account details and debit card CVV at http://rbi-lottery-claim.info to receive funds."
+  },
+  {
+    "id": 21,
+    "category": "ambiguous",
+    "expected_verdict": "CANNOT VERIFY",
+    "label": "Generic Verification Request",
+    "message": "Hello, please verify your account details today. Call me back."
+  },
+  {
+    "id": 22,
+    "category": "ambiguous",
+    "expected_verdict": "CANNOT VERIFY",
+    "label": "Transaction Inquiry Without Bank ID",
+    "message": "Hi Rajesh, please confirm your recent transaction by replying YES or NO."
+  },
+  {
+    "id": 23,
+    "category": "ambiguous",
+    "expected_verdict": "CANNOT VERIFY",
+    "label": "Vague Pending Helpdesk Notice",
+    "message": "Important notice: Your verification is pending. Please contact helpdesk."
+  },
+  {
+    "id": 24,
+    "category": "ambiguous",
+    "expected_verdict": "CANNOT VERIFY",
+    "label": "Unspecified Payment Request",
+    "message": "Payment request of Rs 500 received. Check details."
+  },
+  {
+    "id": 25,
+    "category": "ambiguous",
+    "expected_verdict": "CANNOT VERIFY",
+    "label": "Profile Review Query",
+    "message": "Dear customer, your profile details need review before end of month."
+  }
+]
+

@@ -1,0 +1,80 @@
+{
+  "rules": [
+    {
+      "id": "credential_request",
+      "name": "OTP / PIN / CVV Credential Solicitation",
+      "points": 30,
+      "type": "credential",
+      "warning_template": "Requests sensitive credentials (OTP, PIN, CVV, or Password). Banks will NEVER ask you to disclose or share an OTP.",
+      "patterns": [
+        "\\b(?:share|send|provide|tell|forward|enter|submit|verify)\\s+(?:your\\s+)?(?:otp|one[-\\s]time[-\\s]password|pin|mpin|cvv|atm[-\\s]pin|netbanking\\s+password|login\\s+password|\\d+[-\\s]digit\\s+code)\\b",
+        "\\b(?:otp|one[-\\s]time[-\\s]password|pin|cvv)\\s+(?:is\\s+)?(?:required|needed)\\s+(?:to\\s+)?(?:unblock|update|verify|activate|claim|prevent)\\b",
+        "\\bcall\\s+(?:back|us|officer|manager|executive)?\\s*(?:and|to)?\\s*(?:share|give|disclose)\\s+(?:your\\s+)?(?:otp|pin|cvv)\\b",
+        "\\benter\\s+(?:your\\s+)?(?:debit|credit)?\\s*(?:card\\s+)?(?:details|number|cvv|pin)\\b",
+        "\\b(?:share|provide)\\s+(?:card|cvv|expiry)\\s+to\\s+(?:avoid|cancel|process)\\b"
+      ],
+      "disclaimer_patterns": [
+        "\\b(?:do\\s+not|never|don't)\\s+(?:share|disclose|reveal)\\s+(?:your\\s+)?(?:otp|password|pin|atm[-\\s]?pin|mpin|cvv)\\b",
+        "\\bbank\\s+(?:never|will\\s+not)\\s+(?:ask|call)\\s+for\\s+(?:your\\s+)?(?:otp|pin|cvv|password)\\b",
+        "\\bif\\s+not\\s+done\\s+by\\s+you\\b"
+      ]
+    },
+    {
+      "id": "urgency_threat",
+      "name": "Urgent Threat or Account Suspension",
+      "points": 20,
+      "type": "urgent",
+      "warning_template": "Creates artificial panic and urgency ('account blocked', 'within 24 hours', 'immediate disconnection') to force hasty compliance.",
+      "patterns": [
+        "\\b(?:a\\/c|acct|account|card|sim|service|netbanking|yono|refund|transaction)\\s+(?:is\\s+|will\\s+be\\s+|has\\s+been\\s+)?(?:temporarily\\s+)?(?:blocked|suspended|deactivated|closed|terminated|frozen|put\\s+on\\s+hold|on\\s+hold)\\b",
+        "\\b(?:blocked|suspended|deactivated|disconnected)\\s+(?:within|in|by|today|tonight|\\d+\\s*(?:hours|hrs|mins|minutes))\\b",
+        "\\b(?:immediate|urgent)\\s+(?:action|verification|attention)\\s+required\\b",
+        "\\b(?:avoid|prevent)\\s+(?:permanent\\s+)?(?:blocking|deactivation|suspension|disconnection|penalty)\\b",
+        "\\b(?:electricity\\s+(?:power\\s+)?(?:bill|supply)?|power)\\s+(?:will\\s+be\\s+)?(?:disconnected|cutoff)\\b",
+        "\\blast\\s+reminder\\s+before\\s+(?:action|legal|police|blocking)\\b"
+      ]
+    },
+    {
+      "id": "remote_app_apk",
+      "name": "Remote Access or Malicious APK Installation",
+      "points": 25,
+      "type": "remote_app",
+      "warning_template": "Urges installation of dangerous remote desktop software (AnyDesk/TeamViewer/RustDesk) or untrusted APK files.",
+      "patterns": [
+        "\\b(?:anydesk|teamviewer|rustdesk|quicksupport|airdroid|zoho\\s*assist)\\b",
+        "\\bdownload\\s+(?:and\\s+install\\s+)?(?:the\\s+)?(?:app|apk|application)\\b",
+        "\\binstall\\s+(?:support|bank|security|update)\\s+app\\b",
+        "\\.apk\\b",
+        "\\binstall\\s+(?:any\\s+desk|remote\\s+support)\\b"
+      ]
+    },
+    {
+      "id": "kyc_reward_bait",
+      "name": "KYC / Unclaimed Reward / Lottery Lure",
+      "points": 15,
+      "type": "generic_bait",
+      "warning_template": "Uses KYC updates, lottery prizes, or unclaimed reward points as social engineering bait.",
+      "patterns": [
+        "\\b(?:kyc|pan[-\\s]card|aadhaar)\\s+(?:is\\s+)?(?:pending|expired|suspended|not\\s+updated|incomplete)\\b",
+        "\\b(?:update|complete|verify|link)\\s+(?:your\\s+)?(?:kyc|pan|pan[-\\s]aadhaar|aadhaar)\\b",
+        "\\b(?:reward\\s+points|unclaimed\\s+reward|cashback|bonus)\\s+(?:worth|of)?\\s*(?:rs\\.?|inr)?\\s*[\\d,]+\\s*(?:is\\s+)?(?:expiring|ready|credited)\\b",
+        "\\b(?:refund|cashback|bonus|points)\\s+(?:worth|of)?\\s*(?:rs\\.?|inr)?\\s*[\\d,]*\\s*(?:is\\s+)?(?:on\\s+hold|pending|credited|process)\\b",
+        "\\b(?:congratulations|congrats)!?\\s+(?:you\\s+have\\s+)?(?:won|received|selected)\\b",
+        "\\blottery\\s+(?:prize|winner|amount)\\b",
+        "\\bclaim\\s+your\\s+(?:refund|points|cashback|prize)\\b"
+      ]
+    },
+    {
+      "id": "generic_bait_phone",
+      "name": "Generic Salutation with Unofficial Phone Contact",
+      "points": 15,
+      "type": "unverified_contact",
+      "warning_template": "Uses impersonal greeting ('Dear Customer', 'Dear User') paired with an unverified personal phone number or call directive.",
+      "patterns": [
+        "\\b(?:dear\\s+(?:customer|user|account\\s+holder|sir|madam|consumer|cardholder|client))\\b[\\s\\S]{0,180}?\\b(?:immediately|urgently)?\\s*(?:call|contact|whatsapp|reach)\\s+[\\w\\s]{0,50}?(?:\\+?91)?[6-9]\\d{9}\\b",
+        "\\b(?:call|contact|whatsapp|reach)\\s+(?:customer\\s+care|support|helpline|executive|manager|officer|power\\s+officer)[\\w\\s]{0,35}?(?:\\+?91)?[6-9]\\d{9}\\b",
+        "\\bcontact\\s+(?:branch\\s+manager|nodal\\s+officer|executive|power\\s+officer)\\s*(?:at|on|number)?\\s*[:\\-]?\\s*(?:\\+?91)?[6-9]\\d{9}\\b"
+      ]
+    }
+  ]
+}
